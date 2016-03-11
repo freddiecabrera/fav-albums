@@ -18,6 +18,14 @@ router.post('/', function(req, res) {
   });
 });
 
+router.delete('/:id', function(req, res) {
+  var id = req.params.id;
+  Album.delete(id, function(err) {
+    if(err) return res.status(400).send(err);
+    else res.send();
+  });
+});
+
 
 
 

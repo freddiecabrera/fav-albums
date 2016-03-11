@@ -27,3 +27,17 @@ exports.create = function(newAlbum, cb) {
     });
   });
 };
+
+exports.delete = function(id, cb) {
+  this.get((err, albums) => {
+    var length = albums.length;
+    albums = albums.filter(function(album) {
+      return album.id !== id;
+    });
+
+    if(length === albums.length){
+      return cb({err: 'Album was not found.'});
+    }
+    this.write(albums, cb);
+  });
+};

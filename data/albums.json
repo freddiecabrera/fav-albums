@@ -1,1 +1,29 @@
-[{"url":"an image url goes here","description":"This album is dope","rating":"8"},{"url":"an image url goes here","description":"This album is dope","rating":"8"},{"url":"an image url goes here","description":"This album is dope","rating":"8"},{"url":"an image url goes here","description":"This album is dope","rating":"8"},{"url":"an image url goes here","description":"This album is dope","rating":"8"},{"url":"an image url goes here","description":"This album is dope","rating":"8"},{"url":"an image url goes here","description":"This album is dope","rating":"8"},{"url":"url goes here","description":"this is a grabage album","rating":"3","date":"10/01/2016","id":"003cda34-8105-439d-8d5c-906605dc0b9c"}]
+[{
+  "url": "an image url goes here",
+  "description": "This album is dope",
+  "rating": "8"
+}, {
+  "url": "an image url goes here",
+  "description": "This album is dope",
+  "rating": "8"
+}, {
+  "url": "an image url goes here",
+  "description": "This album is dope",
+  "rating": "8"
+}, {
+  "url": "an image url goes here",
+  "description": "This album is dope",
+  "rating": "8"
+}, {
+  "url": "an image url goes here",
+  "description": "This album is dope",
+  "rating": "8"
+}, {
+  "url": "an image url goes here",
+  "description": "This album is dope",
+  "rating": "8"
+}, {
+  "url": "an image url goes here",
+  "description": "This album is dope",
+  "rating": "8"
+}]
