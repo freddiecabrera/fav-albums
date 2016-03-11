@@ -5,6 +5,15 @@ var app = angular.module('fav-albums');
     $scope.newAlbumForm = true;
     $scope.storedAlbums = [];
 
+    $scope.data = {
+     repeatSelect: null,
+     availableOptions: [
+       {id: '1', name: 'Dope'},
+       {id: '2', name: 'Alright'},
+       {id: '3', name: 'Garbage'}
+     ],
+    };
+
     $scope.loadAlbums = () => {
       AlbumService.fetch()
         .then((res) => {
@@ -52,12 +61,15 @@ var app = angular.module('fav-albums');
         });
     };
 
-    $scope.data = {
-     repeatSelect: null,
-     availableOptions: [
-       {id: '1', name: 'Dope'},
-       {id: '2', name: 'Alright'},
-       {id: '3', name: 'Garbage'}
-     ],
+    $scope.removeShoe = (album) => {
+      AlbumService.remove(album)
+      .then(function() {
+        var index = $scope.albums.indexOf(album);
+        $scope.albums.splice(index, 1);
+        console.log('successs');
+      }, function(err) {
+        console.log('error');
+      });
     };
+
   });

@@ -15,4 +15,8 @@ app.service('AlbumService', function($http){
   this.create = (newAlbum) => {
     return $http.post('/albums', newAlbum);
   }
+
+  this.remove = (album) => {
+  return $http.delete(`/albums/${album.id}`);
+};
 });
