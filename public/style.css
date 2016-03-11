@@ -1,0 +1,28 @@
+body{
+  background: #280b28;
+}
+
+.rating {
+  margin-top: 16px;
+}
+
+.addButton{
+  margin-left: 10px;
+  margin-top: 11px;
+}
+
+.newAlbumButton{
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+#title {
+  color: white;
+  text-align: center;
+  margin-top: 63px;
+  font-weight: 300;
+}
+
+.newAlbumForm {
+  margin-top: 40px;
+}

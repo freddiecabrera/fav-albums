@@ -2,8 +2,10 @@
 <html>
   <head>
     <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css"  media="screen,projection"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
     <script src="module.js"></script>
     <script src="controller.js"></script>
@@ -35,7 +37,7 @@
               <option ng-repeat="option in data.availableOptions" value="{{option.name}}">{{option.name}}</option>
             </select>
 
-            <a class="addButton btn-floating btn-large waves-effect waves-light red" ng-click='addAlbum()'><i class="material-icons">add</i></a>
+            <a class="addButton btn-floating btn-large waves-effect waves-light pink" ng-click='addAlbum()'><i class="material-icons">add</i></a>
         </form>
       </div>
 
@@ -61,8 +63,8 @@
                 <i class="large material-icons">view_column</i>
               </a>
               <ul>
-                <li ng-click='removeShoe(album)'><a class="btn-floating red"><i class="material-icons">delete</i></a></li>
-                <li><a class="btn-floating orange"><i class="material-icons">mode_edit</i></a></li>
+                <li ng-click='removeShoe(album)'><a class="btn-floating red darken-3"><i class="material-icons">delete</i></a></li>
+                <li><a class="btn-floating deep-purple darken-1"><i class="material-icons">mode_edit</i></a></li>
               </ul>
             </div>
 
@@ -72,9 +74,5 @@
 
     </div>
 
-
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
   </body>
 </html>
