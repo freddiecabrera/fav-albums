@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css"  media="screen,projection"/>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
@@ -9,12 +10,38 @@
     <script src="services.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
-  <body ng-app>
+  <body ng-app='fav-albums' ng-controller='mainCtrl'>
 
+    <a ng-hide='newAlbumButton' ng-click='startAlbum()' class="waves-effect waves-light btn-large newAlbumButton"><i class="material-icons left">queue_music</i>Add album</a>
+    <div class="container">
+      <div class="row">
+        <form class="col s12" ng-hide='newAlbumForm'>
 
+          <div class="input-field col s4">
+            <input id="search" type="search" required>
+            <label for="search">Add album</label>
+            <i class="material-icons">close</i>
+          </div>
+
+            <div class="input-field col s4">
+              <input id="comment" type="text" class="validate white-text">
+              <label for="comment">Comment</label>
+            </div>
+            <select class="browser-default col s2 rating">
+              <option value="" disabled selected>Rate this album</option>
+              <option>Dope</option>
+              <option>Alright</option>
+              <option>Garbage</option>
+            </select>
+
+            <a class="addButton btn-floating btn-large waves-effect waves-light red" ng-click='addAlbum()'><i class="material-icons">add</i></a>
+        </form>
+      </div>
+    </div>
 
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
   </body>
 </html>

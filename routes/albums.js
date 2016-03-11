@@ -26,14 +26,14 @@ router.delete('/:id', function(req, res) {
   });
 });
 
+router.put('/:id', function(req, res) {
+  var id = req.params.id;
+  var updatedAlbumObject = req.body;
 
-
-
-
-
-
-
-
-
+  Album.update(id, updatedAlbumObject, function(err, updatedAlbum) {
+    if(err) return res.status(400).send(err);
+    else res.send(updatedAlbum);
+  });
+});
 
 module.exports = router;

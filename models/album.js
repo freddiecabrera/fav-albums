@@ -41,3 +41,49 @@ exports.delete = function(id, cb) {
     this.write(albums, cb);
   });
 };
+
+exports.update = function(id, updatesObj, cb) {
+  this.get((err, albums) =>{
+    var updatedAlbum;
+    albums = albums.map(function(album) {
+      if(album.id === id){
+        for(var key in updatesObj){
+          album[key] = updatesObj[key];
+        }
+        updatedAlbum = album;
+      }
+      return album
+    });
+    if(!updatedAlbum){
+      return cb({err: 'Album not found'});
+    }
+    this.write(albums, function(err) {
+      cb(err, updatedAlbum);
+    });
+  });
+};
+
+
+exports.update = function(id, updatesObj, cb) {
+  this.get((err, shoes) => {
+    var updatedShoe;
+    shoes = shoes.map(function(shoe) {
+      if(shoe.id === id) {
+        for(var key in updatesObj) {
+          shoe[key] = updatesObj[key];
+        }
+        updatedShoe = shoe;
+      }
+      return shoe;
+    });
+
+    if(!updatedShoe) {
+      cb( {err: "Shoe not found."} );
+      return;
+    }
+
+    this.write(shoes, function(err) {
+      cb(err, updatedShoe)
+    });
+  });
+};
