@@ -39,15 +39,17 @@ var app = angular.module('fav-albums');
             "link": playAlbum,
             "img": albumUrl,
           }
-          $scope.albums.push(newAlbum);
-          console.log(newAlbum);
+          //$scope.albums.push(newAlbum);
+
+          AlbumService.create(newAlbum)
+            .then((res) => {
+              $scope.albums.push(res.data);
+            }, (err) => {
+              console.log(err);
+            });
         }, (err) => {
           console.log(err);
         });
-      console.log($scope.artistInput);
-      console.log($scope.albumInput);
-      console.log($scope.commentInput);
-      console.log($scope.data.repeatSelect);
     };
 
     $scope.data = {

@@ -1,34 +1,36 @@
-[
-  {
+[{
   "title": "2001",
   "rating": "10",
   "description": "This album is cold",
   "link": "https://open.spotify.com/album/5csXMdS69VOvh8MjyfwkjB",
   "img": "https://i.scdn.co/image/71705ba0970102931b21f5dd9fc47a7746df90ae",
   "id": "6738fdd4-740c-4c65-8fa1-eaa9471163a2"
- },
-  {
+}, {
   "title": "2001",
   "rating": "10",
   "description": "This album is cold",
   "link": "https://open.spotify.com/album/5csXMdS69VOvh8MjyfwkjB",
   "img": "https://i.scdn.co/image/71705ba0970102931b21f5dd9fc47a7746df90ae",
   "id": "6738fdd4-740c-4c65-8fa1-eaa9471163a2"
- },
-  {
+}, {
   "title": "2001",
   "rating": "10",
   "description": "This album is cold",
   "link": "https://open.spotify.com/album/5csXMdS69VOvh8MjyfwkjB",
   "img": "https://i.scdn.co/image/71705ba0970102931b21f5dd9fc47a7746df90ae",
   "id": "6738fdd4-740c-4c65-8fa1-eaa9471163a2"
- },
-  {
+}, {
   "title": "2001",
   "rating": "10",
   "description": "This album is cold",
   "link": "https://open.spotify.com/album/5csXMdS69VOvh8MjyfwkjB",
   "img": "https://i.scdn.co/image/71705ba0970102931b21f5dd9fc47a7746df90ae",
   "id": "6738fdd4-740c-4c65-8fa1-eaa9471163a2"
- }
-]
+}, {
+  "title": "2001 (Explicit Version)",
+  "rating": "Dope",
+  "description": "I love this shit",
+  "link": "https://open.spotify.com/album/5csXMdS69VOvh8MjyfwkjB",
+  "img": "https://i.scdn.co/image/71705ba0970102931b21f5dd9fc47a7746df90ae",
+  "id": "208ef227-af50-4a4f-bd57-3b446cd02849"
+}]
