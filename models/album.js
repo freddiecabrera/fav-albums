@@ -12,3 +12,18 @@ exports.get = function(cb) {
     cb(null, albums);
   });
 };
+
+exports.write = function(albums, cb) {
+  fs.writeFile(albumsFilePath, JSON.stringify(albums), cb);
+};
+
+exports.create = function(newAlbum, cb) {
+  this.get((err, albums) => {
+    if(err) return cb(err);
+    newAlbum.id = uuid();
+    albums.push(newAlbum);
+    this.write(albums, function(err) {
+      cb(err, newAlbum);
+    });
+  });
+};

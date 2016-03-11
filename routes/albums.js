@@ -10,6 +10,13 @@ router.get('/', function(req, res) {
   });
 });
 
+router.post('/', function(req, res) {
+  var newAlbum = req.body;
+  Album.create(newAlbum, function(err) {
+    if(err) return res.status(400).send(err);
+    else{ res.send(newAlbum); }
+  });
+});
 
 
 
